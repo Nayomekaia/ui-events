@@ -39,6 +39,49 @@ a:hover {
 
 /* UI Event Classes */
 
+/*hypo animation*/
+
+.hypo{
+  padding: 30px 40px;
+  font-size: 16px;
+  color: white;
+  border: 1x solid;
+  border-radius: 50px;
+  cursor: pointer;
+  transition:rotate(360deg);
+  position: relative;
+  z-index: 1;
+}
+
+.hypo {
+ 
+  animation: spin 1s infinite linear;
+  background: repeating-conic-gradient(
+    #000000 10%,
+    #000000 20%,
+    #ffffff 30%,
+    #000000 10%
+); 
+ 
+  border-radius: 100%;
+  text-indent: -9999px;
+}
+
+/* Spin and shrink animation */
+@keyframes spin {
+  0% {
+      transform: rotate(0deg) scale(1);
+  }
+  50% {
+      transform: rotate(180deg) scale(1);
+  }
+  100% {
+      transform: rotate(360deg) scale(1);
+  }
+}
+
+
+
 /* Jump animation on the interaction link */
 a:nth-of-type(12) {
   position: relative;
@@ -78,4 +121,46 @@ a:nth-of-type(12) {
   }
 }
 
-/* Jouw animaties */
+/*bounce animation*/
+.bounce-animation {
+  animation: bounce 0.1s ease-in-out;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-150px);
+  }
+}
+
+
+/*waving animation*/
+
+.waving-hand {
+  animation: wave 2s infinite;
+}
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* hover animation */
+.hover-animation {
+  transition: transform 0.3s ease-in-out;
+}
+.hover-animation:hover {
+  transform: scale(1.1);
+}
