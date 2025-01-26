@@ -36,9 +36,6 @@ smiley.addEventListener('click', function() {
 })
 
 
-
-
-
 //*kleiner button*// 
 let kleiner = document.querySelector('a:nth-of-type(4)')
 kleiner.addEventListener('click', function() {
@@ -50,6 +47,7 @@ let bounce = document.querySelector('a:nth-of-type(5)')
 bounce.addEventListener('click', function() {
   bounce.style.animation = 'bounce 1s infinite';
 })
+
 //*refresh button*//
 let refresh = document.querySelector('a:nth-of-type(6)')
 refresh.addEventListener('click', function() {
@@ -58,7 +56,6 @@ refresh.addEventListener('click', function() {
 
 
 //*glow button*//
-
 let glow = document.querySelector('a:nth-of-type(8)')
 glow.addEventListener('click', function() {
   glow.style.boxShadow = '0 0 100px 10px rgba(255, 255, 255, 0.5)';
@@ -81,6 +78,29 @@ let wordgroter = document.querySelector('a:nth-of-type(10)')
 wordgroter.addEventListener('click', function() {
   wordgroter.style.fontSize = '100px'
 })
+
+document.addEventListener('keydown', function(event) {
+  // Pijl omhoog
+  if (event.key === "ArrowUp") {
+      document.body.style.backgroundColor = "lightgreen";
+  }
+  // Pijl omlaag
+  else if (event.key === "ArrowDown") {
+      document.body.style.backgroundColor = "lightpink";
+  }
+  // Pijl naar links
+  else if (event.key === "ArrowLeft") {
+      document.body.style.backgroundColor = "lightblue";
+  }
+  // Pijl naar rechts
+  else if (event.key === "ArrowRight") {
+      document.body.style.backgroundColor = "lightyellow";
+  }
+  // Enter
+  else if (event.key === "Enter") {
+      alert("Je hebt de Enter-toets ingedrukt!");
+  }
+});
 
 
 //* ui-event voorbeeld*//

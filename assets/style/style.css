@@ -37,10 +37,7 @@ a:hover {
   border-color: var(--primary);
 }
 
-/* UI Event Classes */
-
 /*hypo animation*/
-
 .hypo{
   padding: 30px 40px;
   font-size: 16px;
